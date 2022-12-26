@@ -2,6 +2,15 @@
 // Return all possible changes in coins for the input.
 // EX: in = 12, output = [[0,0,0,12], [0,0,1,7], [0,0,2,2], [0,1,0,2]]
 // Recursive function
+
+// - The function sets all the coins to use;
+// - Initialize the array with all ways to return;
+// - Uses greedy algorithm recursively to define the coin to pick;
+// - Pushes the final set to the array to return;
+
+// The greedy algorithm acceps, the actual set, the actual value, and the coins to use;
+// Pick the bigger one and put in the set if possible, calling it again with the new set;
+// And calls it again with a minor pool of coins.
 function makeChange(value){
     const allCoins = [25, 10, 5, 1]
     const allWays = [];
